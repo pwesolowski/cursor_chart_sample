@@ -2,6 +2,8 @@
 
 A modern, interactive React dashboard application for visualizing request and error data with beautiful charts. Built with React, Recharts, and Docker support.
 
+![Dashboard Screenshot](app_screenshot.png)
+
 ## 🎨 Features
 
 - **Green & White Theme**: Clean, professional design using green (#008000) as the primary color
