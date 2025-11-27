@@ -2,6 +2,9 @@
 
 A modern, interactive React dashboard application for visualizing request and error data with beautiful charts. Built with React, Recharts, and Docker support.
 
+URL: [https://cursor-chart-sample.vercel.app](https://cursor-chart-sample.vercel.app/)
+
+
 ![Dashboard Screenshot](app_screenshot.png)
 
 ## 🎨 Features
