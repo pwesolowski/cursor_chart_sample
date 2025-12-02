@@ -15,6 +15,15 @@ RUN npm ci
 # Copy application source
 COPY . .
 
+# Process Excel data if it exists (run prebuild script)
+# This converts data/sagKlasseReport.xlsx to public/klasseData.json
+RUN if [ -f data/sagKlasseReport.xlsx ]; then \
+      echo "Processing Excel data..."; \
+      node scripts/processKlasseData.js; \
+    else \
+      echo "Warning: data/sagKlasseReport.xlsx not found. Skipping data processing."; \
+    fi
+
 # Build the application
 RUN npm run build
 

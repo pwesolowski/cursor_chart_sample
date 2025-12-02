@@ -102,13 +102,13 @@ function App() {
               className={`tab ${activeTab === 'cases' ? 'active' : ''}`}
               onClick={() => setActiveTab('cases')}
             >
-              2 Cases
+             Cases
             </button>
             <button
               className={`tab ${activeTab === 'documents' ? 'active' : ''}`}
               onClick={() => setActiveTab('documents')}
             >
-              3 Documents
+              Documents
             </button>
           </div>
         </div>

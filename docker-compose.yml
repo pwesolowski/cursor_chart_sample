@@ -2,18 +2,21 @@ version: '3.8'
 
 services:
   # React Dashboard Application
+  # Note: Place data/sagKlasseReport.xlsx before building
+  # The build process automatically converts Excel to JSON
   dashboard:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: charts-dashboard
     ports:
-      - "8080:80"
+      - "3005:80"
     restart: unless-stopped
     environment:
       - NODE_ENV=production
 
   # Development service (optional - for development mode)
+  # Data directory is mounted, allowing live data updates
   dashboard-dev:
     image: node:20-alpine
     container_name: charts-dashboard-dev
@@ -23,7 +26,7 @@ services:
       - /app/node_modules
     ports:
       - "3000:3000"
-    command: sh -c "npm install && npm run dev"
+    command: sh -c "npm install && node scripts/processKlasseData.js && npm run dev"
     environment:
       - NODE_ENV=development
     profiles:
