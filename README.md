@@ -2,6 +2,9 @@
 
 A modern, interactive React dashboard for visualizing data with beautiful charts. Features automated Excel data processing and hierarchical classification visualization.
 
+URL: [https://cursor-chart-sample.vercel.app](https://cursor-chart-sample.vercel.app/)
+
+
 ![Dashboard Screenshot](app_screenshot.png)
 
 ## ✨ Features
