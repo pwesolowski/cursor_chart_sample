@@ -1,0 +1,55 @@
+/**
+ * DateSelector Component Styles
+ */
+
+.date-selector-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+}
+
+.date-selector-label {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--white);
+  margin: 0;
+}
+
+.date-selector {
+  padding: 8px 16px;
+  font-size: var(--font-size-base);
+  border: 2px solid var(--white);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--primary-green);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.date-selector:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.date-selector:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .date-selector-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .date-selector {
+    width: 100%;
+  }
+}
+

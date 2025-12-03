@@ -73,13 +73,13 @@ function App() {
 
     switch (activeTab) {
       case 'dashboard':
-        return <Dashboard data={data} />
+        return <Dashboard />
       case 'cases':
         return <Cases />
       case 'documents':
         return <Documents />
       default:
-        return <Dashboard data={data} />
+        return <Dashboard />
     }
   }
 

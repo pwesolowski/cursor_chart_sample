@@ -15,14 +15,17 @@ RUN npm ci
 # Copy application source
 COPY . .
 
-# Process Excel data if it exists (run prebuild script)
-# This converts data/sagKlasseReport.xlsx to public/klasseData.json
+# Process data files if they exist
+# Excel: data/sagKlasseReport.xlsx -> public/klasseData.json
+# CSV: data/KOSDY-PROD.*.csv -> public/serviceData.json
 RUN if [ -f data/sagKlasseReport.xlsx ]; then \
       echo "Processing Excel data..."; \
       node scripts/processKlasseData.js; \
     else \
-      echo "Warning: data/sagKlasseReport.xlsx not found. Skipping data processing."; \
-    fi
+      echo "Warning: data/sagKlasseReport.xlsx not found. Skipping Excel processing."; \
+    fi && \
+    echo "Processing CSV data..." && \
+    node scripts/processCsvData.js
 
 # Build the application
 RUN npm run build

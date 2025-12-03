@@ -26,7 +26,7 @@ That's it! The app is now running with hot reload enabled.
 # Start the application
 docker-compose up -d
 
-# Open your browser to http://localhost:8080
+# Open your browser to http://localhost:3005
 ```
 
 ### Development Mode with Docker

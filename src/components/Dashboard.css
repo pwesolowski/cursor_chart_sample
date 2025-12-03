@@ -6,7 +6,17 @@
   padding: var(--spacing-md) 0;
 }
 
-/* Import Info Card */
+/* Import Info Banner */
+.import-info-banner {
+  background: linear-gradient(135deg, #008000 0%, #006400 100%);
+  color: white;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Legacy Import Info Card - keeping for backwards compatibility */
 .import-info {
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
   color: var(--white);
@@ -39,8 +49,14 @@
 .import-date {
   margin: 0;
   font-size: var(--font-size-base);
-  opacity: 0.95;
   font-weight: 500;
+}
+
+.import-date.green-text {
+  color: #90EE90 !important;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Statistics Grid */
@@ -413,10 +429,86 @@
   }
 }
 
+/* Service Analytics Section */
+.service-analytics-section {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-xl);
+  border-top: 2px solid var(--light-gray);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.section-title {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.service-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  gap: var(--spacing-md);
+  color: var(--dark-gray);
+}
+
+.no-service-data {
+  padding: var(--spacing-xl) 0;
+}
+
+.no-data-card {
+  text-align: center;
+  padding: var(--spacing-xl);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.no-data-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.7;
+}
+
+.no-data-card h2 {
+  color: var(--primary-green);
+  margin: var(--spacing-md) 0;
+}
+
+.no-data-card p {
+  color: var(--dark-gray);
+  margin: var(--spacing-sm) 0;
+  line-height: 1.6;
+}
+
+.no-data-card code {
+  background: var(--light-gray);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .charts-row {
     grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

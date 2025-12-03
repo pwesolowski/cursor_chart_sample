@@ -298,7 +298,7 @@ Stage 2: Serve (Nginx)
     ├── Copy dist/ → /usr/share/nginx/html
     └── Start Nginx
     ↓
-http://localhost:8080
+http://localhost:3005
 ```
 
 ## 🎯 Entry Points

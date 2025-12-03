@@ -254,7 +254,7 @@ Two service configurations:
 
 1. **dashboard** (Production):
    - Builds from Dockerfile
-   - Serves on port 8080
+   - Serves on port 3005
    - Uses Nginx
 
 2. **dashboard-dev** (Development):

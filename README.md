@@ -81,7 +81,7 @@ Before you begin, ensure you have the following installed:
    docker-compose up -d --build
    ```
 
-3. **Open browser** → `http://localhost:8080`
+3. **Open browser** → `http://localhost:3005`
 
 4. **Stop**
    ```bash
@@ -179,7 +179,7 @@ node scripts/processKlasseData.js   # Process Excel manually
 
 ### Docker
 ```bash
-docker-compose up -d --build        # Build and start (localhost:8080)
+docker-compose up -d --build        # Build and start (localhost:3005)
 docker-compose logs -f              # View logs
 docker-compose down                 # Stop and remove
 ```
